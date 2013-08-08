@@ -18,7 +18,7 @@ module.exports = function(grunt) {
   grunt.registerTask('preen', 'Preen bower packages according to preen property of bower.json.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      preview: true
+      preview: false
     });
 
     // If --debug was specified
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       grunt.log.writeln('Preen Complete.');
       done();
     });
-    
+
   });
 
 };
