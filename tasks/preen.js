@@ -25,8 +25,12 @@ module.exports = function(grunt) {
     //if (grunt.option('debug'))
       //options.debug = true;
 
-    preen.preen(options);
-    grunt.log.writeln('Preen Complete.');
+    var done = this.async();
+    preen.preen(options, function(){
+      grunt.log.writeln('Preen Complete.');
+      done();
+    });
+    
   });
 
 };
