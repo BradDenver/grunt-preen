@@ -1,7 +1,7 @@
 {
   "name": "grunt-preen",
   "description": "a grunt task plugin to run preen",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/braddenver/grunt-preen",
   "author": {
     "name": "Brad Denver",
