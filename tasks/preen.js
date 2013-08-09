@@ -15,11 +15,15 @@ module.exports = function(grunt) {
 
   var preen = require('preen');
 
-  grunt.registerTask('preen', 'Preen bower packages according to preen property of bower.json.', function() {
+  grunt.registerTask('preen', 'Preen bower packages according to preen property of bower.json.', function(preview) {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       preview: false
     });
+
+    if(arguments.length === 1) {
+      options.preview = true;
+    }
 
     // If --debug was specified
     //if (grunt.option('debug'))

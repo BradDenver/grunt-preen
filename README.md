@@ -20,70 +20,33 @@ grunt.loadNpmTasks('grunt-preen');
 ## The "preen" task
 
 ### Overview
-In your project's Gruntfile, add a section named `preen` to the data object passed into `grunt.initConfig()`.
+There is no need to add preen to the data object passed into `grunt.initConfig()` as there are currrently no configurable options for grunt-preen. Instead configuration is done by adding a preen property to your projects `bower.json` file as explained [here](https://github.com/BradDenver/Preen#configuration).
 
-```js
-grunt.initConfig({
-  preen: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-})
-```
-
-### Options
-
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, preen is added to the default task in `Gruntfile.js`.
 
 ```js
-grunt.initConfig({
-  preen: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+grunt.registerTask('default', ['myTask', 'preen']);
+```
+or it can be runn via cli
+
+```shell
+grunt preen
 ```
 
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+The only option/target currently provided by preen is the `preen:preview` target that logs what actions would have been taken if preen was run.
 
-```js
-grunt.initConfig({
-  preen: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
+```shell
+grunt preen:preview
 ```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+* Aug 9, 2013 v1.0.0
+  preen and grunt-preen are ready to roll
