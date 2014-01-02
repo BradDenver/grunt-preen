@@ -1,4 +1,4 @@
-# grunt-preen
+# grunt-preen [![Analytics](https://ga-beacon.appspot.com/UA-40041520-3/grunt-preen/readme)](https://github.com/igrigorik/ga-beacon)
 
 > a grunt task plugin to run preen
 
