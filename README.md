@@ -38,10 +38,16 @@ grunt preen
 ```
 
 #### Custom Options
-The only option/target currently provided by preen is the `preen:preview` target that logs what actions would have been taken if preen was run.
+The only options/targets currently provided by preen are the `preen:preview` target that logs what actions would have been taken if preen was run
 
 ```shell
 grunt preen:preview
+```
+
+and `preen:verbose` that logs all actions as they are run
+
+```shell
+grunt preen:verbose
 ```
 
 ## Contributing
@@ -50,3 +56,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 * Aug 9, 2013 v1.0.0
   preen and grunt-preen are ready to roll
+* Nov 11, 2014 v1.1.0
+  * updated to accept both preview and verbose options
