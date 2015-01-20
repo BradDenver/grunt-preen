@@ -20,7 +20,7 @@ grunt.loadNpmTasks('grunt-preen');
 ## The "preen" task
 
 ### Overview
-There is no need to add preen to the data object passed into `grunt.initConfig()` as there are currrently no configurable options for grunt-preen. Instead configuration is done by adding a preen property to your projects `bower.json` file as explained [here](https://github.com/BradDenver/Preen#configuration).
+Configuration is done by adding a preen property to your projects `bower.json` file as explained [here](https://github.com/BradDenver/Preen#configuration). You can also add arguments via the data object passed into `grunt.initConfig()`.
 
 
 ### Usage Examples
@@ -37,8 +37,8 @@ or it can be runn via cli
 grunt preen
 ```
 
-#### Custom Options
-The only options/targets currently provided by preen are the `preen:preview` target that logs what actions would have been taken if preen was run
+#### Custom Targets
+The only targets currently provided by preen are the `preen:preview` target that logs what actions would have been taken if preen was run
 
 ```shell
 grunt preen:preview
@@ -48,6 +48,23 @@ and `preen:verbose` that logs all actions as they are run
 
 ```shell
 grunt preen:verbose
+```
+
+#### Custom Options
+The only option currently provided by preen is the `directory` option. This allows you to override bower's default directory (or the one set in .bowerrc). This can be useful when using preen as part of your build pipeline. This can be added via the data object passed to `grunt.initConfig()`
+
+```javascript
+
+options: {
+	directory: '.tmp/public/bower/files'
+}
+
+```
+
+or it can be passed via the cli
+
+```shell
+grunt preen --directory ./tmp/public/bower/files
 ```
 
 ## Contributing

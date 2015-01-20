@@ -19,7 +19,8 @@ module.exports = function(grunt) {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       preview: false,
-      verbose: false
+      verbose: false,
+      directory: grunt.option('directory')
     });
 
     // merge flags with default options
