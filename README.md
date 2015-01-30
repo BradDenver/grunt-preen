@@ -75,3 +75,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
   preen and grunt-preen are ready to roll
 * Nov 11, 2014 v1.1.0
   * updated to accept both preview and verbose options
+* Jan 30, 2015 v1.2.0
+  * updated to accept new directory option
